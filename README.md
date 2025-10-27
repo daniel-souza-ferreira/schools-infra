@@ -106,7 +106,7 @@ src/
 
 O arquivo CSV deve conter os dados de escolas e suas dependências, similar ao formato encontrado no link abaixo:
  - https://dados.educacao.sp.gov.br/dataset/instala%C3%A7%C3%B5es-f%C3%ADsicas-por-unidade-escolar
- 
+ - No Form Data enviado a rota de /upload, o arquivo deve ser inserido com name igual a file
 Durante o upload, a aplicação fará o mapeamento desses campos e criará registros nas tabelas `schools` e `dependencies`.
 
 ---
