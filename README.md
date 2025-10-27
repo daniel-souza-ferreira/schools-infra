@@ -95,9 +95,11 @@ src/
  │   ├── in-memory/
  │   └── sequelize/
  ├── lib/
- ├── models/
- ├── config/
- └── main.js
+ ├── utils/
+ ├── env/
+ db/
+ ├── sequelize/
+ │   ├── models/
 ```
 
 ---
