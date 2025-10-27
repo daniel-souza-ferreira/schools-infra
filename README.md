@@ -3,7 +3,7 @@
 Aplicação **backend** desenvolvida em **Node.js** com **Express**, que realiza o **upload de arquivos CSV** contendo dados de instalações físicas por unidade escolar do município de São Paulo, armazenando essas informações em um **banco de dados relacional**.  
 A aplicação também implementa um **CRUD completo** para gerenciamento das escolas e suas dependências, utilizando o ORM **Sequelize** e estrutura de camadas baseada em **repositórios**, **use cases**, **controllers** e **middlewares**.
 
-> ⚠️ O frontend não foi implementado até o moemnto, este projeto contém apenas o backend funcional.
+> ⚠️ O frontend não foi implementado até o momento, este projeto contém apenas o backend funcional.
 
 ---
 
@@ -25,8 +25,7 @@ A aplicação também implementa um **CRUD completo** para gerenciamento das esc
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seuusuario/desafio-escolas.git
-cd desafio-escolas
+git clone https://github.com/daniel-souza-ferreira/schools-infra.git
 ```
 
 ### 2. Configure o ambiente
@@ -105,18 +104,10 @@ src/
 
 ## 📦 Exemplo de CSV esperado
 
-O arquivo CSV deve conter os dados de escolas e suas dependências, similar ao formato abaixo:
-
-```csv
-nomedep,de,mun,distr,codesc,nomesc,tipoesc,tipoesc_desc,codsit
-Secretaria de Educação,Diretoria Regional 1,São Paulo,Vila Mariana,12345,Escola Estadual Vila Mariana,1,Ensino Fundamental,Ativa
-Secretaria de Educação,Diretoria Regional 1,São Paulo,Vila Mariana,12346,Escola Estadual Ana Rosa,2,Ensino Médio,Ativa
-```
-
-Durante o upload, a aplicação fará o mapeamento desses campos e criará registros nas tabelas `schools` e `dependencies`.
-
-Um exemplo do arquivo pode ser obtido no seguinte link:
+O arquivo CSV deve conter os dados de escolas e suas dependências, similar ao formato encontrado no link abaixo:
  - https://dados.educacao.sp.gov.br/dataset/instala%C3%A7%C3%B5es-f%C3%ADsicas-por-unidade-escolar
+ 
+Durante o upload, a aplicação fará o mapeamento desses campos e criará registros nas tabelas `schools` e `dependencies`.
 
 ---
 
@@ -143,12 +134,6 @@ Um exemplo do arquivo pode ser obtido no seguinte link:
 | name | STRING | Nome da dependência |
 | quantity | INTEGER | Quantidade |
 | school_id | UUID (FK) | Referência à escola (relação 1:N) |
-
----
-
-## 📄 Licença
-Este projeto está sob a licença **MIT**.  
-Sinta-se livre para utilizar, modificar e distribuir conforme necessário.
 
 ---
 
